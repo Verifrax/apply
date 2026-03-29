@@ -2,8 +2,8 @@
 
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Role](https://img.shields.io/badge/role-intake%20surface-111111)
+![Deploy](https://github.com/Verifrax/apply/actions/workflows/pages.yml/badge.svg?branch=main)
 ![Host](https://img.shields.io/badge/host-apply.verifrax.net-1f6feb)
-![Boundary](https://img.shields.io/badge/boundary-intake%20only-d73a49)
 
 Canonical intake repository for `https://apply.verifrax.net/`, responsible only for applicant intake, intake routing, submission structure, and intake-surface presentation, while remaining outside authority issuance, governed execution, proof publication, public verification, archive publication, documentation authority, status reporting, and evidence-root artifact registration.
 
