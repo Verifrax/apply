@@ -1,0 +1,21 @@
+{
+  "host": "https://apply.verifrax.net",
+  "repo": "apply",
+  "hostClass": "tool",
+  "role": "apply",
+  "title": "VERIFRAX Apply",
+  "description": "Canonical intake surface for contributors, roles, and structured signal.",
+  "deployMode": "static-root",
+  "adjacentHosts": {
+    "Execution": "https://api.verifrax.net",
+    "Proof publication": "https://proof.verifrax.net",
+    "Verification": "https://verify.verifrax.net",
+    "Authority": "https://auctoriseal.verifrax.net",
+    "Runtime reference": "https://corpiform.verifrax.net",
+    "Enforcement reference": "https://cicullis.verifrax.net",
+    "Seal archive": "https://sigillarium.verifrax.net",
+    "Intake": "https://apply.verifrax.net",
+    "Documentation": "https://docs.verifrax.net",
+    "Status": "https://status.verifrax.net"
+  }
+}
