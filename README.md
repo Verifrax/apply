@@ -1,5 +1,16 @@
 # APPLY
 
+Public intake repository for `https://apply.verifrax.net/`.
+
+Repository role: public intake surface only.
+
+Public host ownership: `apply.verifrax.net`.
+
+This repository owns intake only.
+
+Intake is not proof publication. Intake is not verification. Intake is not authority. Intake is not execution.
+
+
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Role](https://img.shields.io/badge/role-intake%20surface-111111)
 ![Deploy](https://github.com/Verifrax/apply/actions/workflows/pages.yml/badge.svg?branch=main)
@@ -48,46 +59,13 @@ A reader should be able to determine immediately:
 
 ## What this repository is not
 
-This repository is not:
-
-* the commercial primary landing surface
-* the execution API
-* the authority issuer
-* the governed runtime
-* the proof publication surface
-* the public verifier surface
-* the seal archive
-* the canonical documentation surface
-* the status surface
-* the evidence-root artifact registry
-
-Specifically, this repository must not act as:
-
-* `https://api.verifrax.net/`
-* `https://proof.verifrax.net/`
-* `https://auctoriseal.verifrax.net/`
-* `https://corpiform.verifrax.net/`
-* `https://verify.verifrax.net/`
-* `https://sigillarium.verifrax.net/`
-* `https://docs.verifrax.net/`
-* `https://status.verifrax.net/`
-* `https://www.verifrax.net/`
-
-It must not publish:
-
-* proof artifacts
-* runtime receipts
-* authority objects
-* archive catalogs
-* verifier semantics as the verifier of record
-* artifact-0005 registration as the evidence root of record
-
-The limiting case is simple:
-
-If `apply` can also execute, publish proof, or issue authority, then role separation is gone and the subdomain map is cosmetic only.
-
-So this repository must stay narrow.
-
+This repository is not a careers portal.
+This repository is not a jobs board.
+This repository is not a generic contact form.
+This repository is not proof publication.
+This repository is not verification.
+This repository is not authority issuance.
+This repository is not governed execution.
 ## Why this repository exists
 
 The stack needs one public place where applications start.
@@ -403,3 +381,15 @@ A contribution here is wrong if it:
 ## License
 
 Apache License Version 2.0. See `LICENSE`.
+
+
+## Intake role boundary
+
+This repository is the public intake surface only.
+
+It exists to collect structured operator applications and qualification signals.
+
+It is not proof publication.
+It is not verification.
+It is not authority issuance.
+It is not governed execution.
