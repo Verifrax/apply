@@ -4,18 +4,16 @@
   "hostClass": "tool",
   "role": "apply",
   "title": "VERIFRAX Apply",
-  "description": "Canonical intake surface for contributors, roles, and structured signal.",
+  "description": "Intake surface for the VERIFRAX public perimeter. This surface accepts intake only. It does not publish proof, determine verification truth, issue authority, or execute governed actions.",
   "deployMode": "static-root",
   "adjacentHosts": {
-    "Execution": "https://api.verifrax.net",
-    "Proof publication": "https://proof.verifrax.net",
-    "Verification": "https://verify.verifrax.net",
+    "Root": "https://www.verifrax.net",
+    "Docs": "https://docs.verifrax.net",
+    "Proof": "https://proof.verifrax.net",
+    "Verify": "https://verify.verifrax.net",
     "Authority": "https://auctoriseal.verifrax.net",
-    "Runtime reference": "https://corpiform.verifrax.net",
-    "Enforcement reference": "https://cicullis.verifrax.net",
-    "Seal archive": "https://sigillarium.verifrax.net",
-    "Intake": "https://apply.verifrax.net",
-    "Documentation": "https://docs.verifrax.net",
+    "Runtime": "https://corpiform.verifrax.net",
+    "Execution": "https://api.verifrax.net",
     "Status": "https://status.verifrax.net"
   }
 }
