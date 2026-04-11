@@ -18,6 +18,11 @@ Intake is not proof publication. Intake is not verification. Intake is not autho
 
 Canonical intake repository for `https://apply.verifrax.net/`, responsible only for applicant intake, intake routing, submission structure, and intake-surface presentation, while remaining outside authority issuance, governed execution, proof publication, public verification, archive publication, documentation authority, status reporting, and evidence-root artifact registration.
 
+## Terminal planes
+
+- **[ANAGNORIUM](https://github.com/Verifrax/ANAGNORIUM)** — terminal recognition
+- **[REGRESSORIUM](https://github.com/Verifrax/REGRESSORIUM)** — terminal recourse
+
 ## Status
 
 * Repository role: intake surface only
@@ -393,3 +398,10 @@ It is not proof publication.
 It is not verification.
 It is not authority issuance.
 It is not governed execution.
+
+## Adjacent sovereign surfaces
+
+This repository is part of the Verifrax sovereign stack and remains bounded relative to:
+
+- **[ANAGNORIUM](https://github.com/Verifrax/ANAGNORIUM)** for terminal recognition
+- **[REGRESSORIUM](https://github.com/Verifrax/REGRESSORIUM)** for terminal recourse
