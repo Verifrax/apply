@@ -31,7 +31,7 @@ This repository is part of the VERIFRAX proof perimeter.
 * Role: apply
 * Deploy mode: static-root
 * Current repository posture: live public intake boundary
-* License: Apache License Version 2.0
+* License: GNU General Public License v3.0
 
 ## Boundary
 
@@ -166,4 +166,5 @@ APPLY is not archive/reference.
 
 ## License
 
-Apache License Version 2.0
+This repository is licensed under the GNU General Public License v3.0. See `LICENSE`.
+
