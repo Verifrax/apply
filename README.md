@@ -1,5 +1,7 @@
 # APPLY
 
+* License: GNU General Public License v3.0
+
 APPLY is the Verifrax intake boundary: the public surface that accepts structured intake into the Verifrax system without becoming authored protocol source, authority issuance, governed execution, public verification, proof publication, or archive/reference.
 
 ## Proof artifacts
@@ -31,8 +33,6 @@ This repository is part of the VERIFRAX proof perimeter.
 * Role: apply
 * Deploy mode: static-root
 * Current repository posture: live public intake boundary
-* License: GNU General Public License v3.0
-
 ## Boundary
 
 This repository owns structured intake only.
@@ -167,6 +167,3 @@ APPLY is not archive/reference.
 ## License
 
 This repository is licensed under the GNU General Public License v3.0. See `LICENSE`.
-
-
-License: Apache License Version 2.0
