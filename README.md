@@ -168,3 +168,5 @@ APPLY is not archive/reference.
 
 This repository is licensed under the GNU General Public License v3.0. See `LICENSE`.
 
+
+License: Apache License Version 2.0
