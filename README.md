@@ -1,6 +1,6 @@
 # APPLY
 
-* License: GNU General Public License v3.0
+* License: GNU Affero General Public License v3.0
 
 APPLY is the Verifrax intake boundary: the public surface that accepts structured intake into the Verifrax system without becoming authored protocol source, authority issuance, governed execution, public verification, proof publication, or archive/reference.
 
@@ -166,4 +166,4 @@ APPLY is not archive/reference.
 
 ## License
 
-This repository is licensed under the GNU General Public License v3.0. See `LICENSE`.
+This repository is licensed under the GNU Affero General Public License v3.0. See `LICENSE`.
