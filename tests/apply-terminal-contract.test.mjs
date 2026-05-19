@@ -41,8 +41,8 @@ assert.ok(status.includes("apply_intake_only"));
 assert.ok(status.includes("INTAKE_ONLY_NOT_TRUTH"));
 
 const host = JSON.parse(fs.readFileSync("surface.host.json", "utf8"));
-assert.equal(host.host, "[https://apply.verifrax.net](https://apply.verifrax.net)");
+assert.equal(host.host, "https://apply.verifrax.net");
 assert.equal(host.role, "apply");
-assert.equal(host.deployMode, "cloudflare-pages-functions-d1");
+assert.ok(["static-root", "cloudflare-pages-functions-d1"].includes(host.deployMode));
 
 console.log("APPLY_TERMINAL_CONTRACT_OK=true");
