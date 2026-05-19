@@ -1,38 +1,25 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>VERIFRAX Apply — Submit</title>
-  <meta name="description" content="VERIFRAX applicant submission surface.">
-  <style>
-    @import url("../surface-system/shell/base.css");
-  </style>
-</head>
-<body>
-  <main class="surface stack">
-    <div class="surface-id">VERIFRAX / apply/submit</div>
-    <h1 class="surface-title">VERIFRAX Apply — Submit</h1>
-    <p class="surface-role">Applicant submission surface.</p>
-    <p class="surface-boundary">This route accepts structured applicant signal only. It does not evaluate proof, publish authority, or serve docs.</p>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VERIFRAX Apply Submit</title><link rel="stylesheet" href="/assets/apply.css"></head>
+<body><main class="stack">
 
-    <section class="panel">
-      <h2>Submission rule</h2>
-      <ul class="list-tight">
-        <li>Submit one directly reviewable artifact.</li>
-        <li>Do not submit generic templates.</li>
-        <li>Do not replace output with narrative.</li>
-      </ul>
-    </section>
-
-    <section class="panel">
-      <h2>Next valid actions</h2>
-      <div class="links">
-        <a href="/task">Open task</a>
-        <a href="/confirm">Open confirm</a>
-        <a href="/">Return to apply</a>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+<div class="id">VERIFRAX / apply/submit</div><h1>Submit artifact.</h1>
+<p class="boundary">Submission creates private intake material only. It is not acceptance, proof, verification, authority, recognition, or recourse.</p>
+<form id="apply-form" class="panel stack" data-endpoint="/api/submit">
+<input class="trap" name="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label>Name <input required name="name" maxlength="120"></label>
+<label>Email <input required type="email" name="email" maxlength="180"></label>
+<label>Timezone <input required name="timezone" maxlength="80"></label>
+<label>GitHub URL <input required type="url" name="github" maxlength="240"></label>
+<label>Track <select required name="track"><option value="">Choose one</option><option>protocol-review</option><option>security-adversarial-review</option><option>verifier-engineering</option><option>surface-frontend</option><option>enterprise-compliance</option><option>documentation-systems</option></select></label>
+<label>Capability <textarea required name="capability" minlength="20" maxlength="300"></textarea></label>
+<label>Work links <textarea required name="work_links" minlength="10" maxlength="1200"></textarea></label>
+<label>Artifact link <input required type="url" name="artifact_link" maxlength="240"></label>
+<label>Why VERIFRAX <textarea required name="why_verifrax" minlength="20" maxlength="300"></textarea></label>
+<label>Availability <select required name="availability"><option value="">Choose one</option><option>one-off</option><option>2h-week</option><option>5h-week</option><option>project-based</option></select></label>
+<label>Task summary <textarea required name="task_summary" minlength="20" maxlength="500"></textarea></label>
+<label><input required type="checkbox" name="unpaid_ack"> no guaranteed compensation</label>
+<label><input required type="checkbox" name="async_ack"> async capable</label>
+<label><input required type="checkbox" name="output_first_ack"> output before discussion</label>
+<button type="submit">Submit structured signal</button><pre id="apply-result"></pre>
+</form>
+</main><script src="/assets/apply-submit.js"></script></body></html>

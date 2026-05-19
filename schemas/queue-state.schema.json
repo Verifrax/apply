@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "enum": [
+    "new",
+    "review",
+    "accepted",
+    "rejected",
+    "deferred",
+    "spam",
+    "quarantined"
+  ]
+}

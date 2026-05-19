@@ -1,0 +1,1 @@
+fetch("/api/confirm"+location.search).then(r=>r.json()).then(j=>document.getElementById("receipt").textContent=JSON.stringify(j,null,2)).catch(()=>document.getElementById("receipt").textContent=JSON.stringify({ok:false,error:"confirm_unavailable"},null,2));

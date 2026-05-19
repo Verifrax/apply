@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "identity",
+    "links",
+    "track",
+    "signal",
+    "intent",
+    "constraints",
+    "task_output"
+  ],
+  "properties": {
+    "track": {
+      "enum": [
+        "protocol-review",
+        "security-adversarial-review",
+        "verifier-engineering",
+        "surface-frontend",
+        "enterprise-compliance",
+        "documentation-systems"
+      ]
+    },
+    "constraints": {
+      "properties": {
+        "unpaid_ack": {
+          "const": true
+        },
+        "async_ack": {
+          "const": true
+        },
+        "output_first_ack": {
+          "const": true
+        }
+      }
+    }
+  }
+}

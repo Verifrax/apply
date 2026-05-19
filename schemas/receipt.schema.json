@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "receipt_type",
+    "schema_version",
+    "id",
+    "created_at",
+    "track",
+    "state",
+    "boundary"
+  ],
+  "properties": {
+    "receipt_type": {
+      "const": "APPLY_INTAKE_RECEIPT"
+    },
+    "boundary": {
+      "const": "INTAKE_ONLY_NOT_TRUTH"
+    }
+  }
+}

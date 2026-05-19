@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "output_presence",
+    "link_quality",
+    "alignment",
+    "clarity",
+    "total",
+    "threshold"
+  ],
+  "properties": {
+    "threshold": {
+      "enum": [
+        "reject",
+        "defer",
+        "candidate_pool"
+      ]
+    }
+  }
+}

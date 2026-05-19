@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "track": "enterprise-compliance",
+  "title": "enterprise-compliance",
+  "time_limit_minutes": 120,
+  "required_fields": [
+    "surface_or_object",
+    "current_reading",
+    "failure_or_gap",
+    "minimal_correction",
+    "artifact_link"
+  ],
+  "fail_if": [
+    "generic praise",
+    "no concrete surface or object",
+    "no artifact link",
+    "no correction",
+    "claim that APPLY verifies or authorizes"
+  ],
+  "evaluation_axes": [
+    "specificity",
+    "boundary accuracy",
+    "execution quality"
+  ]
+}

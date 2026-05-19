@@ -1,0 +1,4 @@
+export const TRACKS = new Set(["protocol-review", "security-adversarial-review", "verifier-engineering", "surface-frontend", "enterprise-compliance", "documentation-systems"]);
+export const STATES = new Set(["new", "review", "accepted", "rejected", "deferred", "spam", "quarantined"]);
+export const REVIEW_REASONS = new Set(["artifact_fake","wrong_track","role_confusion","security_risk","exceptional_signal","missing_concrete_output","strong_boundary_signal"]);
+export function validateSubmission(i:any):string|null{if(!i||typeof i!=="object")return"invalid_json";if(i.trap)return"bot_trap";if(i.schema_version!=="1.0.0")return"invalid_schema_version";if(!TRACKS.has(i.track))return"invalid_track";if(!i.signal?.artifact_link)return"missing_artifact";if(!Array.isArray(i.signal?.work_links)||i.signal.work_links.length<1)return"missing_work_links";if(!i.constraints?.unpaid_ack||!i.constraints?.async_ack||!i.constraints?.output_first_ack)return"missing_ack";return null;}

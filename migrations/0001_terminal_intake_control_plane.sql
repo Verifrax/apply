@@ -1,0 +1,11 @@
+create table if not exists submissions (id text primary key,schema_version text not null,created_at text not null,updated_at text not null,state text not null check (state in ('new','review','accepted','rejected','deferred','spam','quarantined')),track text not null,email text not null,github_url text not null,artifact_url text not null,score_total real not null,score_json text not null,receipt_json text not null,submission_json text not null,ip_hash text,user_agent_hash text);
+create table if not exists submission_events (id text primary key,submission_id text not null,created_at text not null,from_state text,to_state text not null,actor text not null,reason text);
+create table if not exists review_decisions (id text primary key,submission_id text not null,created_at text not null,decision text not null,reason text,produced_something integer not null default 0,aligned integer not null default 0,above_baseline integer not null default 0,review_seconds integer not null default 0);
+create table if not exists blocked_attempts (id text primary key,created_at text not null,reason text not null,ip_hash text,user_agent_hash text,payload_json text);
+create table if not exists rate_limits (ip_hash text not null,window_start text not null,count integer not null,primary key (ip_hash, window_start));
+create index if not exists submissions_state_created_idx on submissions(state, created_at desc);
+create index if not exists submissions_track_created_idx on submissions(track, created_at desc);
+create index if not exists submissions_score_idx on submissions(score_total desc);
+create index if not exists events_submission_idx on submission_events(submission_id, created_at asc);
+create index if not exists decisions_submission_idx on review_decisions(submission_id, created_at asc);
+create index if not exists blocked_reason_created_idx on blocked_attempts(reason, created_at desc);
