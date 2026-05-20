@@ -1,0 +1,9 @@
+{
+  "name": "@verifrax/apply-terminal-intake-control-plane",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/apply-terminal-contract.test.mjs",
+    "verify": "bash scripts/verify-apply-terminal.sh"
+  }
+}

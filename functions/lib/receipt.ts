@@ -1,0 +1,2 @@
+import { hmacSha256 } from "./hash";
+export async function makeReceipt(i:{id:string;created_at:string;track:string;state:string;secret?:string}){const r:any={receipt_type:"APPLY_INTAKE_RECEIPT",schema_version:"1.0.0",id:i.id,created_at:i.created_at,track:i.track,state:i.state,boundary:"INTAKE_ONLY_NOT_TRUTH"};if(i.secret)r.signature=await hmacSha256(i.secret,`${r.receipt_type}|${r.id}|${r.created_at}|${r.track}|${r.state}|${r.boundary}`);return r;}

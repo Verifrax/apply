@@ -1,0 +1,1 @@
+fetch("/api/status").then(r=>r.json()).then(j=>document.getElementById("status").textContent=JSON.stringify(j,null,2)).catch(()=>document.getElementById("status").textContent=JSON.stringify({ok:true,mode:"static_fallback",role:"apply_intake_only"},null,2));

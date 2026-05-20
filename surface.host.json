@@ -4,7 +4,7 @@
   "hostClass": "tool",
   "role": "apply",
   "title": "VERIFRAX Apply",
-  "description": "Intake surface for the VERIFRAX public perimeter. This surface accepts intake only. It does not publish proof, determine verification truth, issue authority, or execute governed actions.",
+  "description": "Terminal intake control plane for VERIFRAX. This host converts untrusted human intent into structured private review signal only. It does not publish proof, verify truth, issue authority, execute governed actions, recognize terminal truth, or assign recourse.",
   "deployMode": "static-root",
   "adjacentHosts": {
     "Root": "https://www.verifrax.net",
@@ -14,6 +14,7 @@
     "Authority": "https://auctoriseal.verifrax.net",
     "Runtime": "https://corpiform.verifrax.net",
     "Execution": "https://api.verifrax.net",
-    "Status": "https://status.verifrax.net"
+    "Status": "https://status.verifrax.net",
+    "Archive": "https://sigillarium.verifrax.net"
   }
 }

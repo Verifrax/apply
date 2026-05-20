@@ -1,0 +1,1 @@
+export async function notify(url:string|undefined,body:unknown):Promise<void>{if(!url)return;try{await fetch(url,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body)})}catch{}}
