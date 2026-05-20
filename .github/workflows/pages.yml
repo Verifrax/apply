@@ -1,51 +1,62 @@
 name: Publish apply surface
+
 on:
-push:
-branches: [ main ]
-workflow_dispatch:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
 permissions:
-contents: read
-pages: write
-id-token: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
-contract:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v4
-- uses: actions/setup-node@v4
-with:
-node-version: "22"
-- run: npm test
-- run: npm run verify
-deploy-static-fallback:
-needs: contract
-runs-on: ubuntu-latest
-environment:
-name: github-pages
-url: ${{ steps.deployment.outputs.page_url }}
-steps:
-- uses: actions/checkout@v4
-- uses: actions/configure-pages@v5
-- name: Prepare static artifact
-shell: bash
-run: |
-set -euo pipefail
-rm -rf dist
-mkdir -p dist
-cp -R public/. dist/
-cp CNAME dist/CNAME
-grep -Fx "apply.verifrax.net" dist/CNAME
-test -f dist/index.html
-test -f dist/task/index.html
-test -f dist/submit/index.html
-test -f dist/confirm/index.html
-test -f dist/status/index.html
-test -f dist/privacy/index.html
-test -f dist/admin/index.html
-test -f dist/tasks/protocol-review.json
-test -f dist/schemas/submission.schema.json
-- uses: actions/upload-pages-artifact@v3
-with:
-path: dist
-- id: deployment
-uses: actions/deploy-pages@v4
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm test
+      - run: npm run verify
+
+  deploy-static-fallback:
+    needs: contract
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+
+      - name: Prepare static artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf dist
+          mkdir -p dist
+          cp -R public/. dist/
+          cp CNAME dist/CNAME
+          grep -Fx "apply.verifrax.net" dist/CNAME
+          test -f dist/index.html
+          test -f dist/task/index.html
+          test -f dist/submit/index.html
+          test -f dist/confirm/index.html
+          test -f dist/status/index.html
+          test -f dist/privacy/index.html
+          test -f dist/admin/index.html
+          test -f dist/tasks/protocol-review.json
+          test -f dist/schemas/submission.schema.json
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
